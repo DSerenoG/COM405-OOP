@@ -9,13 +9,14 @@ package week4;
  *
  * @author 4SERED52
  */
-public class Week4 {
+public class Week4 
+{
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
+    public static void main(String[] args) 
+   {
     
+   } 
 }
