@@ -16,6 +16,13 @@ public class Week5 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        Bus b = new Bus();
+        
+        
+        b.addPassenger(new Passenger( "Daniel", 18 ));
+        
+        System.out.println( "Seats:" + b.getSeats() );
     }
     
 }

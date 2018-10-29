@@ -3,30 +3,23 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package week5;
+package week4;
 
 /**
  *
  * @author Danie
  */
-public class Passenger
+public class Staff 
 {
     private String name;
-    private int age;
     
-    public Passenger(String nameIn, int ageIn)
+    public Staff(String nameIn)
     {
-     name = nameIn;
-     age = ageIn;
-    }  
+        name = nameIn;
+    }
     
     public String getName()
     {
         return name;
-    }
-    
-    public int getAge()
-    {
-        return age;
     }
 }

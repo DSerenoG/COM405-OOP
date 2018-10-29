@@ -7,31 +7,53 @@ package week5;
 
 /**
  *
- * @author 4SERED52
+ * @author Danie
  */
 public class Bus 
 {
-    private Passenger[] busNum;
+    private Passenger[] passBus;
+    private int seats;
     private boolean addPassenger;
-    
-    
-    
     
     public Bus()
     {
-        busNum = new Passenger[15];
+        passBus = new Passenger[15];
     }
     
-    public boolean addPassenger(Bus busIn)
+    public boolean addPassenger(Passenger passIn)
     {
-        for(int i=0; i < 15; i++)
+        for(int seats = 0;seats < passBus.length; seats++)
         {
-            if()
+            if(passBus[seats] == null)
             {
-              
+                passBus[seats] = passIn;
                 return true;
             }
         }
         return false;
     }
+    
+    public boolean removePassenger(String passIn)
+    {
+        for(int seats = 0; seats < passBus.length; seats++)
+        {
+            if(passBus[seats] != null)
+            {
+                String Passenger = passBus[seats].getName();
+                
+                if(Passenger == passIn)
+                {
+                    passBus[seats] = null;
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+    
+   public int getSeats()
+   {
+       return seats;
+   }
+
 }
