@@ -21,8 +21,12 @@ public class Week5 {
         
         
         b.addPassenger(new Passenger( "Daniel", 18 ));
+        System.out.println(b.toString());
         
-        System.out.println( "Seats:" + b.getSeats() );
+        b.removePassenger("Daniel");
+        System.out.println(b.toString());
+        
+        
     }
     
 }
