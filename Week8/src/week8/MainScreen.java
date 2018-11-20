@@ -56,6 +56,7 @@ public class MainScreen extends JFrame implements ActionListener {
         park = new CarPark();
     }
 
+
     public void initComponents(){
         
         lblTitle = new JLabel("CAR PARK");
@@ -63,6 +64,8 @@ public class MainScreen extends JFrame implements ActionListener {
         lblReg = new JLabel("Reg no.");
         
         txtReg = new JTextField();
+        
+     
         
         btnAdd = new JButton("Add Car");
           btnAdd.addActionListener(this);
@@ -87,8 +90,10 @@ public class MainScreen extends JFrame implements ActionListener {
         constraints.fill = GridBagConstraints.HORIZONTAL;
         this.add(txtReg, constraints);
         
+       
+        
        constraints.fill = GridBagConstraints.NONE;
-       constraints.gridy = 2;
+       constraints.gridy = 3;
        constraints.gridx = 0;
        this.add(btnAdd, constraints);
        
@@ -113,6 +118,14 @@ public class MainScreen extends JFrame implements ActionListener {
             else{
                 
                 JOptionPane.showMessageDialog(null, "Is no space on the park!");
+            }
+        }
+        else if(ev.getSource().equals(btnRemove)){
+            
+            String reg = txtReg.getText();
+            
+            if(park.removeCar(reg)){
+                JOptionPane.showMessageDialog(null, "Car has been removed!");
             }
         }
     }
